@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">  
+        <div class="screen">
+            <div class="screen-image">
+                <img class="postcard" src="./resources/helloworld.png">
+
+                <div class="pos sheep">
+                    <img src="./resources/sheep.jpg"/>
+                </div>
+                <div class="pos cat">
+                    <img class="me" src="./resources/1.png"/>
+                </div>
+                <a class="pos movie" href="https://archive.org/details/primal-s-2-e-10/Primal+S1E1.mp4">
+                    <img src="./resources/primal.jpg"/>
+                </a> 
+            </div>
+        </div>
+        <div class="presents">
+            <img class="present image1" src="./resources/present1.png"/>
+            <img class="present image2" src="./resources/present2.png"/>
+            <img class="present image3" src="./resources/present3.png"/> 
+        </div> 
+    </div>      
+</body>
+<script>
+    const postcard = document.querySelector('.postcard')
+
+    const present1 = document.querySelector('.image1')
+    const sheep = document.querySelector('.sheep')
+
+    const present2 = document.querySelector('.image2')
+    const cat = document.querySelector('.cat')
+
+    const present3 = document.querySelector('.image3')
+    const movie = document.querySelector('.movie')
+
+    function toggleItems (present, itemsToRemove, itemsToToggle) {
+        present.addEventListener('click', () => {
+            itemsToToggle.forEach(el => el. classList.toggle('show'));
+            itemsToRemove.forEach(item => item.classList.remove('show'));
+    })}
+    toggleItems(present1, [cat, movie], [sheep])
+    toggleItems(present2, [sheep, movie], [cat])
+    toggleItems(present3, [cat, sheep], [movie])
+
+</script>
+</html>
