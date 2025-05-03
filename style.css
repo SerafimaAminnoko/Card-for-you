@@ -1,0 +1,98 @@
+:root {
+    --card-border-radius: 40px;
+}
+
+body {
+    background-color: rgb(1, 63, 104);
+    /*    background-image: url('resources/room2.png'); */
+    display: flex;
+    justify-content: center;
+
+}
+
+.screen {
+    border: 5px solid;
+    border-color: rgb(83, 38, 20);
+    background-color: rgb(83, 38, 20);
+    width: 770px;
+    height: 510px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screen-image {
+    border: 8px solid;
+    border-color: rgb(87, 25, 25);
+    border-radius: var(--card-border-radius);
+    height: 494px;
+    width: 755px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 494px;
+        width: 755px;
+        object-fit: cover;
+    }
+    .sheep>img, img.me {
+        width: initial;
+        object-fit: contain;
+    }
+}
+
+.postcard {
+    border-radius: 40px;
+    height: 494px;
+}
+
+.pos {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--card-border-radius);
+}
+
+.cat, .sheep {
+    background-color: rgb(0, 140, 255);
+    width: 100%;
+    height: 100%;
+    img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.movie img {    
+    border-radius: var(--card-border-radius);
+}
+
+.presents {
+    border: 10px solid;
+    border-color: rgb(75, 33, 16);
+/*    background-color: rgb(110, 60, 40); */
+    background-color: rgb(255, 240, 153);
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+    gap: 0px;
+    width: 760px;
+
+    .present {
+        border: 6px solid rgb(75, 33, 16);
+        border-top: none;
+        border-bottom: none;
+        margin: -3px;
+        width: 250px;
+        height: 250px;
+        cursor: pointer;
+    }
+}
+
+.show { display: block; }
+
+.hide { display: none; }
